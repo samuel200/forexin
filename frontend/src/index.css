@@ -1,0 +1,133 @@
+.page-holder{
+    position: relative;
+}
+
+.page{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.page-enter{
+    opacity: 0;
+}
+
+.page-enter.page-enter-active{
+    opacity: 1;
+    transition: .5s opacity;
+}
+
+.page-exit{
+    opacity: 1;
+}
+
+.page-exit.page-exit-active{
+    opacity: 0;
+    transition: .8s opacity;
+}
+
+
+/* Loading Component Styles */
+
+#loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    min-height: 100vh;
+    transition: .5s .2s all;
+    background: transparent;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 30;
+}
+
+#loading::before{
+    content: "";
+    display: block;
+    min-height: 100%;
+    min-width: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: rgb(59, 34, 121); 
+    transition: .5s all;
+}
+
+#loading::after{
+    content: "";
+    display: block;
+    min-height: 100%;
+    min-width: 50%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background: rgb(59, 34, 121); 
+    z-index: 1;
+    transition: .5s all;
+}
+
+#loading div{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    align-self: center;
+    z-index: 2;
+}
+
+#loading div img{
+    width: 50%;
+    margin-top: 50px;
+    animation: 2s linear forwards infinite in-out;
+}
+
+#loading div::before{
+    content: "";
+    display: block;
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 50%;
+    border: 1px solid #5929CA;
+    border-top-color: #8D97F6;
+    border-bottom-color: #8D97F6;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    animation: 8s linear forwards infinite circular;
+}
+
+.loading-remove{
+    opacity: 0;
+    background: transparent;
+    transition-delay: .2s;
+}
+
+.loading-remove#loading::before{
+    left: -50%;
+    transition: left .5s;
+}
+
+.loading-remove#loading::before{
+    right: -50%;
+    transition: right .5s;
+}
+
+@keyframes in-out{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.17);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* End Of Loading Component Styles */
+
+.hide{
+    display: none
+}

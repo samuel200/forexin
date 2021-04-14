@@ -1,0 +1,111 @@
+/*telegram time */
+div.telegram a{
+    bottom:20px;
+    left: -5px;
+    position: fixed;
+    z-index: 999;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  div.telegram a .circlephone{
+    box-sizing: content-box;
+    border: 2px solid #ffae13;
+    width: 150px;
+    height: 150px;
+    bottom: -25px;
+    left: 10px;
+    position: absolute;
+    border-radius: 100%;
+    opacity: .5;
+    animation: circle-anim 2.4s infinite ease-in-out;
+    transition: all .5s;
+  }
+  @keyframes circle-anim{
+    0%{
+        transform: rotate(0deg) scale(0.5) skew(1deg);
+        opacity: .1;
+    }
+    30%{
+        transform:rotate(0deg) scale(0.7) skew(1deg);
+        opacity: .5;
+    }
+    100%{
+        transform: rotate(0deg) scale(1) skew(1deg);
+        opacity: .1;
+    }
+  }
+  div.telegram div.circle-fill{
+    box-sizing: content-box;
+    background-color: #ffae13;
+    width: 100px;
+    height: 100px;
+    bottom: 0px;
+    left: 35px;
+    position: absolute;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    animation: circle-fill 2.3s infinite ease-in-out;
+    transition: all .5s;
+  }
+  @keyframes circle-fill{
+    0%{
+        transform: rotate(0deg) scale(0.7) skew(1deg);
+        opacity: .2;
+    }
+    50%{
+        transform:rotate(0deg) scale(1) skew(1deg);
+        opacity: .2;
+    }
+    100%{
+        transform: rotate(0deg) scale(.7) skew(1deg);
+        opacity: .2;
+    }
+  }
+  
+  div.telegram div.img-circle{
+    box-sizing: content-box;
+    width: 72px;
+    height: 72px;
+    bottom: 14px;
+    left: 49px;
+    position: absolute;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    background-color:darkgreen;
+  }
+  div.telegram div.img-circle div.img-circlephone{
+    box-sizing: content-box;
+    width: 66px;
+    height: 77px;
+    background-image: url('../assets/whatsapp.pn');
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation-name: tossing;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    
+  }
+  div.telegram div.img-circle div.img-circlephone i{
+    box-sizing: content-box;
+    font-size: 3em;
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation-name: tossing;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    margin-left: 18px;
+    margin-top: 12px;
+    
+  }
+  @keyframes tossing{
+    0%{
+        transform: rotate(-8deg);
+    }
+    50%{
+        transform: rotate(8deg);
+    }
+    100%{
+        transform: rotate(-8deg);
+    }
+  }

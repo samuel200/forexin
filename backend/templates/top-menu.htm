@@ -1,0 +1,62 @@
+<header class="header">
+    <script src="https://widgets.coingecko.com/coingecko-coin-price-marquee-widget.js"></script>
+    <coingecko-coin-price-marquee-widget coin-ids="bitcoin,ethereum,eos,ripple,litecoin" currency="usd"
+        background-color="#ffffff" locale="en"></coingecko-coin-price-marquee-widget>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8" data-aos="fade-down">
+                <div class="header-contacts">
+                    <div class="header-contacts__item line-top-bg">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.html#contract"></use>
+                        </svg><span>Company Number</span><a href="{% url 'backend:index' %}">#{{ site_information.company_number }}</a>
+                    </div>
+                    <div class="header-contacts__item header-contacts__item_address line-top-bg">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.html#pin"></use>
+                        </svg><span>Address </span><a href="javascript:void(0)">{{ site_information.company_address }}</a>
+                    </div>
+                    <div class="header-contacts__item line-top-bg">
+                        <svg>
+                            <use xlink:href="assets/img/sprite.html#phone"></use>
+                        </svg><span>Phone</span><a href="javascript:void(0)">{{ site_information.phone_number }}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <div class="language" data-aos="fade-down" data-aos-delay="100">
+                    <div class="language-main"><span class="flag-icon flag-icon-us"></span><span>Eng</span>
+                        <svg>
+                            <use xlink:href="assets/img/sprite.html#arrow-down"></use>
+                        </svg>
+                    </div>
+                    <div class="language-hide"><a class="language__item"
+                            href="#"><span>Japan</span><span
+                                class="flag-icon flag-icon-jp"></span></a><a class="language__item active"
+                            href="#"><span>English</span><span
+                                class="flag-icon flag-icon-us"></span></a><a class="language__item"
+                            href="#"><span>Poland</span><span
+                                class="flag-icon flag-icon-pl"></span></a><a class="language__item"
+                            href="#"><span>Русский</span><span
+                                class="flag-icon flag-icon-ru"></span></a><a class="language__item"
+                            href="#"><span>Sweden</span><span
+                                class="flag-icon flag-icon-se"></span></a><a class="language__item"
+                            href="#"><span>China</span><span
+                                class="flag-icon flag-icon-cn"></span></a><a class="language__item"
+                            href="#"><span>Vietnam</span><span
+                                class="flag-icon flag-icon-vn"></span></a><a class="language__item"
+                            href="#"><span>Brazil</span><span
+                                class="flag-icon flag-icon-br"></span></a><a class="language__item"
+                            href="#"><span>Ukraine</span><span
+                                class="flag-icon flag-icon-ua"></span></a><a class="language__item"
+                            href="#"><span>France</span><span
+                                class="flag-icon flag-icon-fr"></span></a></div>
+                </div>
+                <div class="header-btns" data-aos="fade-up" data-aos-delay="100">
+                    <a class="main-btn main-btn_blue login-btn" href="{% url 'backend:login' %}">SIGN IN</a>
+                    <a class="main-btn login-btn" href="{% url 'backend:register' %}">OPEN ACCOUNT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
